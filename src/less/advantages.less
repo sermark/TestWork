@@ -1,0 +1,102 @@
+.advantages
+{
+    width: auto;
+    height: auto;
+    margin-top: 95px;
+
+    background-color: #fff;
+}
+
+.advantages__wrapper
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.advantages__wrapper h1
+{
+    font-family: 'MuseoSans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+
+    margin: 0 15px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #1b1b1b;
+}
+
+.advantages__list
+{
+    .ul-clear();
+    .flexbox ();
+    justify-content: space-between;
+
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.advantages__item
+{
+    position: relative;
+
+    width: 23%;
+    padding-top: 210px;
+    &::before
+    {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+
+        display: block;
+
+        width: 90px;
+        height: 90px;
+
+        content: '';
+        transform: translateX(-50%;);
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &--tech::before
+    {
+        background-image: url('../img/icon-tech.png');
+    }
+    &--law::before
+    {
+        background-image: url('../img/icon-law.png');
+    }
+    &--rep::before
+    {
+        background-image: url('../img/icon-rep.png');
+    }
+    &--cred::before
+    {
+        background-image: url('../img/icon-cred.png');
+    }
+}
+
+.advantages__item h2
+{
+    font-family: 'MuseoSans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    text-transform: uppercase;
+
+    color: #1b1b1b;
+}
+
+.advantages__item p
+{
+    font-family: 'MuseoSans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+
+    color: #9b9b9b;
+}

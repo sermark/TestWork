@@ -1,0 +1,105 @@
+.services
+{
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+
+    background-color: #fff;
+}
+
+.services__wrapper
+{
+    .flexbox ();
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.services__info
+{
+    width: 47%;
+    margin-right: 15px;
+    padding-top: 50px;
+    padding-right: 45px;
+
+    background-image: url('../img/over.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.services__info h1
+{
+    font-family: 'MuseoSans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+
+    text-align: right;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.services__list
+{
+    .ul-clear();
+    .flexbox ();    
+    flex-direction: column;
+
+    width: 53%;
+    height: 100%;
+    margin-left: 15px;
+}
+
+.services__item
+{
+    font-family: 'MuseoSans', sans-serif;
+
+    position: relative;
+
+    height: 100%;
+    margin-left: 15px;
+    padding-left: 80px;
+
+    text-transform: uppercase;
+
+    color: #1e1e1e;
+    &::before
+    {
+        position: absolute;
+        top: 25px;
+        left: 10px;
+
+        display: block;
+
+        width: 40px;
+        height: 55px;
+
+        content: '';
+
+        background-image: url('../img/icon-copy.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &:hover
+    {
+        background-color: #e7e7ec;
+        &::after
+        {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+
+            display: block;
+
+            width: 30px;
+            height: 45px;
+
+            content: '';
+
+            background-image: url('../img/arrow.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

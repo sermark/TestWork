@@ -1,0 +1,101 @@
+.order
+{
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+
+    background-color: #fff;
+}
+
+.order__wrapper
+{
+    .flexbox ();
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.order__info
+{
+    width: 47%;
+    margin-left: 15px;
+    padding-top: 50px;
+    padding-left: 45px;
+
+    background-image: url('../img/over.png');
+    background-size: cover;
+}
+
+.order__info h1
+{
+    font-family: 'MuseoSans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.order__list
+{
+    .ul-clear();
+    .flexbox ();
+
+    flex-direction: column;
+
+    width: 53%;
+    height: 100%;
+    margin-right: 15px;
+}
+
+.order__item
+{
+    font-family: 'MuseoSans', sans-serif;
+
+    position: relative;
+
+    height: 100%;
+    margin-right: 15px;
+    padding-left: 70px;
+
+    text-transform: uppercase;
+
+    color: #1e1e1e;
+    &:hover
+    {
+        background-color: #e7e7ec;
+        &::after
+        {
+            position: absolute;
+            top: 35px;
+            right: 30px;
+
+            display: block;
+
+            width: 30px;
+            height: 45px;
+
+            content: '';
+
+            background-image: url('../img/arrow.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.order__item h2
+{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.order__item p
+{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+}

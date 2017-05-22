@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+ 	<head>
+    	<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link href="css/normalize.css" rel="stylesheet">
+    	<link href="css/style.min.css" rel="stylesheet">
+    	<title>Auto</title>
+  </head>
+
+  	<body>
+      <header class="page-header">
+        <div class="page-header__wrapper">
+          <div class="page-header__logo">
+            <img src="img/logo.png" alt="auto-logo">
+          </div>
+          <div class="page-header__phones">
+            <a href="tel:+375172223344" class="page-header__phone">+375 17 222-33-44</a>
+            <span>Отдел продаж</span>
+          </div>
+          <div class="page-header__phones">
+            <a href="tel:+375172223344" class="page-header__phone">+375 17 222-33-44</a>
+            <span>Прием на комиссию</span>
+          </div>
+          <div class="page-header__social">
+            <a href="#" class="social__link social__link--email"></a>
+            <a href="#" class="social__link social__link--skype"></a>
+            <a href="#" class="social__link social__link--fb"></a>
+          </div>
+          <div class="page-header__callback">
+            <a href="#" class="btn btn--callback">Заказать звонок</a>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--active">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Услуги <span></span></a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Автокаталог</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Статьи</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Отзывы</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Контакты</a>
+              </li>
+            </ul>
+            <div class="main_nav__search">
+              <a href=""></a>
+            </div>
+          </div>
+
+        </nav>
+      </header>
+
+      <main>
+        <section class="offer">
+          <div class="offer__wrapper">
+            <div class="offer__slider">
+              <h2>Новые модели в каталоге</h2>
+              <ul class="offer__list slider">
+                <li class="offer__item offer__item--active">
+                  <img src="img/car.jpg" alt="car" height="540">
+                  <div class="offer__car">
+                    <p>2010 Alfa Romeo 159 2.2 JTS Selespeed</p>
+                    <p>USD 9600</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="slider__controls-1 offer__list-control">
+                <a class="slider__control-1  slider__control-1--prev"></a>
+                <a class="slider__control-1  slider__control-1--next"></a>
+              </div>
+            </div>
+
+            <div class="offer__search">
+              <form action="/echo" method="post" class="offer__form filter">
+                <div class="offer__form-name">
+                  <h2>Поиск авто</h2>
+                  <a href="#">Расширенный поиск</a>
+                </div>
+                <fieldset class="filter__brand">
+                  <legend>Марка</legend>
+                  <select name="car-brand" id="">
+                    <option value="0"></option>
+                  </select>
+                </fieldset>
+                <fieldset class="filter__model">
+                  <legend>Модель</legend>
+                  <select name="car-model" id="">
+                    <option value=""></option>
+                  </select>
+                </fieldset>
+                <fieldset class="filter__year">
+                  <legend>Год выпуска</legend>
+                  <select name="min-year" id="">
+                    <option value>С</option>
+                  </select>
+                  <select name="max-year" id="">
+                    <option value>По</option>
+                  </select>
+                </fieldset>
+                <div class="filter__wrapper">
+                  <fieldset class="filter__body-type">
+                   <legend>Тип кузова</legend>
+                   <select name="body-type" id="">
+                      <option value=""></option>
+                   </select>
+                  </fieldset>
+                 <fieldset class="filter__transmission">
+                    <legend>Трансмиссия</legend>
+                    <select name="transmission" id="">
+                     <option value=""></option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="filter__wrapper">
+                  <fieldset class="filter__fuel">
+                    <legend>Топливо</legend>
+                    <select name="fuel" id="">
+                      <option value=""></option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="filter__engine">
+                    <legend>Объем двигателя</legend>
+                    <select name="min-value" id="">
+                      <option value>От</option>
+                    </select>
+                    <select name="max-value" id="">
+                      <option value>До</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="filter__wrapper">
+                  <fieldset class="filter__price">
+                    <legend>Цена</legend>
+                    <ul class="filter__price-list">
+                      <li class="filter__price-item ilter__price-item--doll filter__price-item--active">
+                      $</li>
+                      <li class="filter__price-item ilter__price-item--euro">€</li>
+                      <li class="filter__price-item ilter__price-item--byn">BYN</li>
+                    </ul>
+                    <select name="min-price" id="">
+                      <option value>От</option>
+                    </select>
+                    <select name="max-price" id="">
+                      <option value>До</option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="filter__sort">
+                    <input type="checkbox" id="nds" class= "filter__sort-check">
+                    <label for="nds" class="filter__sort-label">Цена с НДС</label>
+                  </fieldset>
+                </div>
+                <button class="btn btn--pick-auto" type="submit">Подобрать авто</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="order">
+          <div class="order__wrapper">
+            <div class="order__info">
+              <h1>Автомобили <br>под заказ</h1>
+            </div>
+            <ul class="order__list">
+              <li class="order__item">
+                <h2>Подержанные авто</h2>
+                <p>Из европы, США, РФ</p>
+              </li>
+              <li class="order__item">
+                <h2>Новые автомобили</h2>
+                <p>Из РФ</p>
+              </li>
+              <li class="order__item">
+                <h2>Автомобили с НДС</h2>
+                <p>Для юридических лиц</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="advantages">
+          <div class="advantages__wrapper">
+            <h1>Преимущества работы с нами</h1>
+            <ul class="advantages__list">
+              <li class="advantages__item advantages__item--tech">
+                <h2>Техническая проверка</h2>
+                <p>Все продаваемые автомобили проходят полную техническую и компьютерную диагностику.</p>
+              </li>
+              <li class="advantages__item advantages__item--law">
+                <h2>Юридическая проверка</h2>
+                <p>Все автомобили проходят юридическую экспертизу. Мы гарантируем юридическую чистоту приобретаемых у нас автомобилей.</p>
+              </li>
+              <li class="advantages__item advantages__item--rep">
+                <h2>Безупречная репутация</h2>
+                <p>Мы дорожим вашим доверием. О нашей работе вы можете найти и прочитать отзывы на независимых интернет-площадках.</p>
+              </li>
+              <li class="advantages__item advantages__item--cred">
+                <h2>Кредит или лизинг</h2>
+                <p>Готовы предоставить вам кредит или лизинг на покупку выбранного автомобиля.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="services">
+          <div class="services__wrapper">
+            <ul class="services__list">
+              <li class="services__item">
+                <h2>Обмен автомобилей</h2>
+                <p>trade-in</p>
+              </li>
+              <li class="services__item">
+                <h2>Автомобили в лизинг</h2>
+                <p>срок до 84 месяцев</p>
+              </li>
+              <li class="services__item">
+                <h2>Доставка автомобилей</h2>
+                <p>Из РФ и европы</p>
+              </li>
+            </ul>
+            <div class="services__info">
+              <h1>Услуги</h1>
+            </div>
+          </div>
+        </section>
+        <section class="news">
+          <div class="news__wrapper">
+            <h1>Новости</h1>
+            <div class="news__inner">
+              <div class="news__main">
+                <img src="img/news-main.jpg" alt="news-main">
+                <div class="news__main-info">
+                  <p class="news__section">В разделе: <span>Анонсы</span></p>
+                  <p class="news__section">Дата: <span>10 марта 2017</span></p>
+                  <h3>Техническая проверка</h3>
+                  <p class="news__descr">Все продаваемые автомобили проходят полную техническую и компьютерную диагностику.</p>
+                  <a href="#"></a>
+                </div>
+              </div>
+              <div class="news__other">
+                <div class="news__other-1">
+                  <img src="img/news-other.jpg" alt="news-other">
+                  <div class="news__other-info">
+                    <p class="news__section">В разделе: <span>Анонсы</span></p>
+                    <p class="news__section">Дата: <span>10 марта 2017</span></p>
+                    <h3>Техническая проверка</h3>
+                    <p class="news__descr">Все продаваемые автомобили проходят полную техническую и компьютерную диагностику.</p>
+                    <a href="#"></a>
+                  </div>
+                </div>
+                <div class="news__other-2">
+                  <img src="img/news-other.jpg" alt="news-other">
+                  <div class="news__other-info">
+                    <p class="news__section">В разделе: <span>Анонсы</span></p>
+                    <p class="news__section">Дата: <span>10 марта 2017</span></p>
+                    <h3>Техническая проверка</h3>
+                    <p class="news__descr">Все продаваемые автомобили проходят полную техническую и компьютерную диагностику.</p>
+                    <a href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="news__subscribe">
+                <h2>Подпишитесь <br> на нашу рассылку</h2>
+                <p>Будьте в курсе новостей и скидок</p>
+                <label for="news-email">Ваш e-mail</label>
+                <input type="email" name="news-email" id="news-email">
+                <a href="#" class="btn btn--subscribe">Подписаться</a>
+              </div>
+            </div>
+            <div class="banner">
+              <h3>Баннер</h3>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="about__wrapper">
+            <div class="about__img">
+              <img src="img/img-about.jpg" alt="about">
+            </div>
+            <div class="about__info">
+              <p>Автосалон А-АВТО</p>
+              <h2>О компании</h2>
+              <p class="about__text">Покупка нового автомобиля – для любого человека сложный выбор, масса сомнений, советы друзей, очередное взвешивание «за» и «против». Для того, чтобы сократить путь от идеи приобрести новую машину до поворота ключа в замке зажигания, мы предлагаем вам свои квалифицированные услуги. <br> <br>
+
+              У нас большой опыт работы по продаже автомобилей. Какую бы марку вы не предпочитали, мы подберем для вас самое выгодное предложение, любую комплектацию по адекватной цене. Если понадобится, доставим вам авто из России, Европы и США.</p>
+              <a href="#" class="btn btn--about">Читать дальше</a>
+            </div>
+          </div>
+        </section>
+        <section class="partners">
+          <div class="partners__wrapper">
+            <h1>Наши партнеры</h1>
+            <ul class="partners__list slider">
+              <li class="partners__item partners__item--active">
+                <a href="#" class="partners__link partners__link--bta"></a>
+              </li>
+              <li class="partners__item partners__item--active">
+                <a href="#" class="partners__link partners__link--trozd"></a>
+              </li>
+              <li class="partners__item partners__item--active">
+                <a href="#" class="partners__link partners__link--nordauto"></a>
+              </li>
+              <li class="partners__item partners__item--active">
+                <a href="#" class="partners__link partners__link--prior"></a>
+              </li>
+              <li class="partners__item partners__item--active">
+                <a href="#" class="partners__link partners__link--insurance"></a>
+              </li>
+            </ul>
+            <div class="slider__controls-2 partners__list-control">
+                <a class="slider__control-2  slider__control-2--prev slider__control-2--disable"></a>
+                <a class="slider__control-2  slider__control-2--next"></a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="page-footer">
+        <div class="page-footer__top">
+          <div class="page-footer__wrapper">
+            <div class="page__footer-logo">
+              <img src="img/logo-footer.png" alt="logo-footer">
+              <p>2016 ООО "Голден Моторс"</p>
+              <p>УПН 191570638 выдано Минским<br>Горисполкомом 19.12.2011г.</p>
+              <p>220006, г.Минск ул. Маяковского 2, оф. 11. <br> тел. +375-(44)-7-832-832</p>
+              <p>Разработка сайта - Гусаров Групп</p>
+            </div>
+            <div class="page__footer-services">
+              <h3>Услуги</h3>
+              <ul class="page__footer-services-list">
+                <li class="page__footer-services-item">
+                  <a href="#">Авто под заказ</a>
+                </li>
+                <li class="page__footer-services-item">
+                  <a href="#">Обмен автомобилей</a>
+                </li>
+                <li class="page__footer-services-item">
+                  <a href="#">Авто в кредит</a>
+                </li>
+                <li class="page__footer-services-item">
+                  <a href="#">Авто в лизинг</a>
+                </li>
+                <li class="page__footer-services-item">
+                  <a href="#">Доставка автомобилей</a>
+                </li>
+                <li class="page__footer-services-item">
+                  <a href="#">Прием на комиссию</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page__footer-about">
+              <h3>О компании</h3>
+              <ul class="page__footer-about-list">
+                <li class="page__footer-about-item">
+                  <a href="#">Новости</a>
+                </li>
+                <li class="page__footer-about-item">
+                  <a href="#">О компании</a>
+                </li>
+                <li class="page__footer-about-item">
+                  <a href="#">Клиентам</a>
+                </li>
+                <li class="page__footer-about-item">
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page__footer-contacts">
+              <h3>Контакты</h3>
+              <ul class="page__footer-contacts-list">
+                <li class="page__footer-contacts-item page__footer-contacts-item--pin">
+                  <p>г. Минск ул. Маяковского 2, офис 11</p>
+                </li>
+                <li class="page__footer-contacts-item page__footer-contacts-item--tel">
+                  <a href="tel:+375447832832">+375(44)783-28-32</a>
+                  <a href="tel:+375447832832">+375(44)783-28-32</a>
+                </li>
+                <li class="page__footer-contacts-item page__footer-contacts-item--em">
+                  <a href="mailto:#">goldenmotors.by@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page__footer-down">
+          <div class="page-footer__wrapper page-footer__wrapper-down">
+            <div class="page__footer-social">
+              <b>Мы с социальных <br>сетях</b>
+              <ul class="page__footer-social-list">
+                <li class="page__footer-social-item">
+                  <a href="#" class="social__link social__link--fb"></a>
+                </li>
+                <li class="page__footer-social-item">
+                  <a href="#" class="social__link social__link--google"></a>
+                </li>
+                <li class="page__footer-social-item">
+                  <a href="#" class="social__link social__link--youtube"></a>
+                </li>
+              </ul>
+            </div>
+            <div class="page__footer-subscribe">
+              <b>Подпишитесь <br>на нашу рассылку</b>
+              <div class="page__footer-subscribe-inner">
+                <input type="email" name="email" value="Ваш email">
+                <a href="#" class="btn btn--footer-subscribe">Подписаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+	  </body>
+</html>

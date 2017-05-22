@@ -1,0 +1,131 @@
+.partners
+{
+    width: auto;
+    height: auto;
+    margin-top: 100px;
+
+    background-color: #fff;
+}
+
+.partners__wrapper
+{
+    position: relative;
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+.partners__wrapper h1
+{
+    font-family: 'MuseoSans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+
+    margin: 0 15px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #1b1b1b;
+}
+
+.partners__list
+{
+    .ul-clear();
+    .flexbox();
+    justify-content: space-between;
+    
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 80px;
+
+    background-color: #fbfbfb;
+
+    
+}
+
+.partners__item
+{
+    display: none;
+    &--active
+    {
+        display: block;
+    }
+}
+
+.partners__link
+{
+    position: relative;
+    z-index: 10;
+
+    display: block;
+
+    width: 165px;
+    height: 105px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    &--bta
+    {
+        background-image: url('../img/bta.png');
+    }
+    &--trozd
+    {
+        background-image: url('../img/trozd.png');
+    }
+    &--nordauto
+    {
+        background-image: url('../img/nord-auto.png');
+    }
+    &--prior
+    {
+        background-image: url('../img/prior.png');
+    }
+    &--insurance
+    {
+        background-image: url('../img/insurance.png');
+    }
+}
+
+.slider__controls-2
+{
+    position: absolute;
+    top: 150px;
+
+    width: 100%;
+    height: 50px;
+}
+
+.slider__control-2
+{
+    position: absolute;
+    top: 3px;
+
+    display: block;
+
+    width: 35px;
+    height: 35px;
+
+    cursor: pointer;
+
+    border-bottom: 7px solid #181742;
+    border-left: 7px solid #181742;
+    &--disable
+    {
+        border-bottom: 7px solid #706f8a;
+        border-left: 7px solid #706f8a;
+    }
+    &--prev
+    {
+        left: 10px;
+
+        transform: rotate(45deg);
+    }
+    &--next
+    {
+        right: 10px;
+
+        transform: rotate(-135deg);
+    }
+}
